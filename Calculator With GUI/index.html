@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUI calculator</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Asset/css/style.css">
+</head>
+
+<body>
+
+    <div class="container mt-4">
+        <h1 class="calcShow">Calculator</h1>
+        <div class="row">
+
+            <div class="col-12">
+
+                <form>
+
+                    <div class="form-group ml-3 mr-3">
+
+                        <input  disabled="disabled" class="form-control output" type="text"  name="number1" id="displayColor">
+                       
+
+                        <div class="row inputs">
+
+                            <div class="col padR">
+                                <input class="form-control input" placeholder="Enter your numbers here" type="text"  name="number2" id="number1">
+                            </div>
+                            
+                            <div class="col padL">
+                            <select class="form-control operations">
+
+                                <option value="" selected>Click here to choose an operation</option>
+                                <option value="add">Addition</option>
+                                <option value="sub">Subtraction</option>
+                                <option value="multi">Multiplication</option>
+                                <option value="divi">Division</option>
+                            </div>
+             
+                            </select>  
+
+                        </div>
+                        
+
+                        
+        
+                    </div>
+
+                </form>
+
+            </div>
+
+    
+        </div>
+    </div>
+    <div class="ml-3 mr-3 cal-buttons mt-4 marginBottom">
+
+        <div class="row">
+
+            <div class="col-3">
+                <input type="submit" value="AC" id="action" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            <div class="col-3">
+                <input type="submit" value= "Back" id="action" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            <div class="col-3">
+                <input type="submit" value="%" id="oneOp" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            <div class="col-3">
+                <input type="submit" value="/" id="operation" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            
+        </div>
+
+        <div class="row mt-3">
+
+            <div class="col-3">
+                <input type="submit" value="7" id="num" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            <div class="col-3">
+                <input type="submit" value="8" id="num" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            <div class="col-3">
+                <input type="submit" value="9" id="num" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            <div class="col-3">
+                <input type="submit" value="*" id="operation" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            
+        </div>
+
+        <div class="row mt-3">
+
+            <div class="col-3">
+                <input type="submit" value="4" id="num" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            <div class="col-3">
+                <input type="submit" value="5" id="num" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            <div class="col-3">
+                <input type="submit" value="6" id="num" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            <div class="col-3">
+                <input type="submit" value="-" id="operation" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            
+        </div>
+
+        <div class="row mt-3">
+
+            <div class="col-3">
+                <input type="submit" value="1" id="num" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            <div class="col-3">
+                <input type="submit" value="2" id="num" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            <div class="col-3">
+                <input type="submit" value="3" id="num" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            <div class="col-3">
+                <input type="submit" value="+" id="operation" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            
+        </div>
+
+        <div class="row mt-3 mb-4">
+
+            <div class="col-6">
+                <input type="submit" value="0" id="num" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            <div class="col-3">
+                <input type="submit" value="." id="num" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            <div class="col-3">
+                <input type="submit" value="=" id="ans" class="btn btn-secondary btn-lg btn-block">
+            </div>
+            
+        </div>
+
+        
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="/Asset/js/app.js"></script>
+</body>
+
+</html>
