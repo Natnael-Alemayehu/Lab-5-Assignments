@@ -1,6 +1,6 @@
 //Assign buttons to the respective query selector
-const opInput = document.querySelectorAll('#operation');
-const noInput = document.querySelectorAll('#num');
+const operationInput = document.querySelectorAll('#operation');
+const noInputMade = document.querySelectorAll('#num');
 const actionInput = document.querySelectorAll('#action');
 const oneOpInput = document.querySelectorAll('#oneOp');
 const ansInput = document.querySelector('#ans');
@@ -23,10 +23,10 @@ if (opchoose == false){
 }
 
 //Event listener initialization
-opInput.forEach(function(elements){
+operationInput.forEach(function(elements){
     elements.addEventListener('click', opbtnListner);
 })
-noInput.forEach(function(elements){
+noInputMade.forEach(function(elements){
     elements.addEventListener('click', nobtnListner);
 })
 actionInput.forEach(function(elements){
@@ -136,6 +136,35 @@ function ansbtnListner(e){
     numberInput = [];
     check=0;
 }
+//Helper functions
+function disableop(item){
+    operationInput.forEach(function(element){
+        if(element.value == item){            
+            element.disabled = false;
+        }
+        else{
+            element.disabled = true;
+        }
+    })
+}
+function disableall(){
+    operationInput.forEach(function(element){            
+            element.disabled = true;      
+    })
+    ansInput.disabled = true;
+}
+function enable(){    
+    operationInput.forEach(function(element){            
+        element.disabled = false;  
+})
+noInputMade.forEach(function(element){        
+    element.disabled = false;
+})
+actionInput.forEach(function(element){        
+element.disabled = false;
+})
+ansInput.disabled = false;
+}
 
 // Disabling the buttons -- Only the bold ones can be touched
 function operationSet(){
@@ -159,7 +188,7 @@ function operationSet(){
     }
 }
 
-//operation functions
+//Operations to be performed.
 function add(items){
     let answer = 0;
     items.forEach(function(element){
@@ -179,79 +208,12 @@ function multilpy(items){
     return answer;
 }
 function divide(items){
-
     if(Number(items[1]) == 0){
-
         return "You can not divide a number with 0!"
     }
-
     else{
-
         let answer = Number(items[0]) / Number(items[1]);
-
     return answer;
-
     }
-}
-
-//helper
-function disableop(item){
-
-    opInput.forEach(function(element){
-
-        if(element.value == item){
-            
-            element.disabled = false;
-        }
-
-        else{
-
-            element.disabled = true;
-        }
-
-
-    })
-}
-
-function disableall(){
-
-    opInput.forEach(function(element){
-
-            
-            element.disabled = true;
-      
-    })
-
-    ansInput.disabled = true;
-}
-
-function enable(){
-
-    
-    opInput.forEach(function(element){
-
-            
-        element.disabled = false;
-  
-})
-
-noInput.forEach(function(element){
-
-        
-    element.disabled = false;
-
-})
-
-actionInput.forEach(function(element){
-
-        
-element.disabled = false;
-
-})
-
-
-ansInput.disabled = false;
-
-
 }
 
