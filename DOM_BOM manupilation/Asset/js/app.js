@@ -79,7 +79,7 @@ function reloadPage() {
 // Filter tasks function definition 
 function filterTasks(e) {
     const search_term = filter.value;
-    const tasks = document.querySelectorAll('.collection-item');n
+    const tasks = document.querySelectorAll('.collection-item')
     tasks.forEach(function(elements){
         if(elements.firstChild.textContent.indexOf(search_term)){
             elements.style.display = 'none';
@@ -108,9 +108,7 @@ function taskSort(){
     }
   }
   else{
-
     for(let i=len; i>=0; i-- ){
-
         registeredTasks.forEach(function(elements){
 
             if(taskDates[i] == elements.value){
@@ -118,8 +116,6 @@ function taskSort(){
                 taskList.appendChild(elements);
             }
    })
-
     }
   }
-    
 }
